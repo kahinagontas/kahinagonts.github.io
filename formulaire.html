@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="formulaire.css">
+    
+</head>
+<body>
+    
+        
+        <section class = "banner">
+            <h2>RESERVEZ VOTRE TABLE MAINTENANT!</h2>
+            <div class = "card-container">
+                <div class = "card-img">
+                    <!-- image here -->
+                </div>
+<br>
+<div id="coroussel" >
+    <div class="images">
+        <img src="images (1).jpeg" alt="bosson">
+        <img src="images (2).jpeg" alt="bosson">
+        <img src="images (2).jpeg" alt="bosson">
+        <img src="2_SLIDER-1.jpg" alt="bosson">
+       
+    </div>
+   </div>
+                
+                    <h3>Reservation</h3>
+                    <form >
+                        <div class = "form-row">
+                            <select name = "days">
+                                <option value = "day-select">Selectionner un jour</option>
+                                <option value = "sunday">dimance</option>
+                                <option value = "monday">Lundi</option>
+                                <option value = "tuesday">Mardi</option>
+                                <option value = "wednesday">Mercredi</option>
+                                <option value = "thursday">Jeudi</option>
+                                <option value = "friday">Vendredi</option>
+                                <option value = "saturday">Samedi</option>
+                            </select>
+
+                            <select name = "hours">
+                                <option value = "hour-select">Selectionner l'heur</option>
+                                <option value = "10">10: 00</option>
+                                <option value = "10">12: 00</option>
+                                <option value = "10">14: 00</option>
+                                <option value = "10">16: 00</option>
+                                <option value = "10">18: 00</option>
+                                <option value = "10">20: 00</option>
+                                <option value = "10">22: 00</option>
+                            </select>
+                        </div>
+
+                        
+
+                        <div class = "form-row">
+                            <input type = "number" placeholder="Combien de personne?" min = "1">
+                            <input type = "submit" value = "RESERVER LA TABLE" >
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <form action="traitement.php" id="form" style="width: 300px;height: 400px;">
+                <label for="adresse"> votre adresse </label>
+                <input type="text" id="adresse" name="adresse">
+                <div id="adre_f"></div>
+                <label for="pass"> mot de passe </label>
+                <input type="password" id="pass" name="password">
+                <div id="pass_f"></div>
+                <input type="submit" name="envoyer" value="connexion" id="envoi">
+            </form>
+            <script>
+                document.getElementById("form").onsubmit=function(event){
+                    let nom=document.getElementById("adresse").value;
+                    let mot_de_passe=document.getElementById("pass").value;
+                    if(nom!="null"){
+                        event.preventDefault();
+                        document.getElementById("adresse").style.borderColor='red';
+                        document.getElementById("adre_f").style.color="red";
+                        document.getElementById("adre_f").textContent="adresse introuvable";
+                    }
+                    if(mot_de_passe!=2004){
+                        event.preventDefault();
+                        document.getElementById("pass").style.borderColor='red';
+                        document.getElementById("pass_f").style.color="red";
+                        document.getElementById("pass_f").textContent="mot de passe incorrecte";
+                        
+                    }
+        
+                }
+               
+            </script>
+             <p style="margin-top: -150px;">Complétez le formulaire ci-dessus pour reserver une table.celle-ci sera confirmée par email.nous vous remercions
+                de bien respecter les horaire d'arrivée afin de faciliter les services.Vous pouvez également nous contacter du mardi au samedi au
+                 +3314538960</p>
+             <input type="button" id="imge" value="cliquez ici si vous avez effectuez une reservation! " style="margin-top: 50px;">
+             <input type="button" id="imgee" value="non on a pas reservé!">
+             <div id="imag"></div>
+             <script>
+                 document.getElementById("imge").onclick=function(){
+                     let image1=document.createElement("img");
+                     image1.src="Screenshot_20240510_121806_OneDrive.jpg";
+                     document.getElementById("imag").appendChild(image1);}
+         
+                     document.getElementById("imgee").onclick=function(){
+                         let div=document.getElementById("imag");
+                         if(div.hasChildNodes()){
+                         div.removeChild(div.firstChild);
+                         }
+             
+                 }
+             </script>
+        </section>
+       
+        
+    
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="projet.css">
+    
+</head>
+
+<body>
+    <header>
+        <img src="Bonnard_Logo-1080x281.png">
+    </header>
+    <nav>
+      <ul class="menu">
+        
+        <li><a href="#"> menu</a>
+          <ul class="sousmenu">
+            <li><a href="plats et salades.html">plats et salades</a></li>
+            <li><a href="vins.html">vins et boissons</a></li>
+            <li><a href="dessert.html">Dessert et gateau</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="reservation.html">reservation</a>
+        </li>
+        <li>
+          <a href="localisation.html">localisation</a>
+        </li>
+    </ul>
+</nav>
+<div id="coroussel" >
+  <div class="images">
+      <img src="2_SLIDER-4.jpg" alt="bosson">
+      <img src="2_SLIDER-7.jpg" alt="bosson">
+      <img src="2_SLIDER-8.jpg" alt="bosson">
+      <img src="2_SLIDER-1.jpg" alt="bosson">
+     
+  </div>
+ </div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span>
+  <span class="dot" ></span>
+  <span class="dot" ></span>
+</div>
+<h1> Bonnard</h1>
+<h1> Marais</h1>
+<h2> une cuisine généreuse et gourmande,100% épicurienne et végétarienne.</h2>
+<p> Situé au 18 rur des Graviliers dan le 3 ème arrondissement de Paris, Bonnard est un restaurant instimiste 
+    qui propose une cuisine végétale et gourmande dans un cadre soigné de pierre et de voulours.
+    Bonnard s'attache à travailler des produits de saison issus des circuits courts pour creer des plats bistronomiques aussi beaux
+    que bons.
+    Bonnard propose egalement une carte de vins soigneusement selectionnée,privilégiant les vins issus de l'agriculteure biodynamique.
+    C'EST BEAU ,C'EST BON,C'EST BONNARD.
+</p>
+<div class="buttton">
+  <a class="btn" href="plats et salades.html"> MENU BONNARD</a>
+  <a class="btn" href="reservation.html"> RESERVATON</a>
+  <a class="btn" href="localisation.html"> LOCALISATION</a>
+</div>
+
+
+<div id="slider" style="margin-top: 180px;">
+  <div class="contrainer" >
+  <img  style="position: absolute;" src="2_SLIDER-3.jpg" alt=image" id="img1">
+  <img  style="position: absolute;"src="2_SLIDER-7.jpg" alt="image" id="img2">
+  <img style="position: absolute;" src="2_SLIDER-4.jpg" alt="image" id="img3">
+  <img style="position: absolute;" src="images (2).jpeg" alt="image" id="img4">
+  <img style="position: absolute;" src="2_SLIDER-3.jpg" alt="image" id="img6">
+  
+ 
+  </div>
+</div>
+
+  <script src="jquery-3.7.0.min.js"></script>
+  <script>
+      $(document).ready(function(){
+          var image=$('#slider img');
+          var numSlides = image.length;
+          var activeSlide =0;
+          var speed =2000;
+          var fade=1000;
+          var timer= setInterval(rotate,speed);
+          image.eq(activeSlide).show();
+          function rotate(){
+              activeSlide++;
+              if(activeSlide==numSlides){ activeSlide=0;}
+              image.not(activeSlide).fadeOut(fade);
+              image.eq(activeSlide).fadeIn(fade);
+          }
+      })
+      
+             
+
+  </script>
+
+<footer >
+  <div>
+  <ul> 
+      <li class="facebook"> <img src="facebook.png" class="fac"> <a href="www">Facebook</a></li>
+      <li class="instagramme"> <img src="instagram.PNG" class="fac"><a href="www">instagram</a></li>
+      <li class="twitter"><img src="twitter.PNG" class="fac"> <a href="www">twitter</a></li>
+  </ul>
+</div>
+<div> BONNARD <br> contacter nous!<br>18 rue des Graviliers 75003 Paris<br>mentions légales-Politique de confidentialté</div>
+</footer>
+
+</body>
+</html>

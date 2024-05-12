@@ -1,0 +1,52 @@
+img{ width: 300px;height: 300px;}
+.menu {
+display: flex;                /* Transformation en flexbox */
+padding:0;                    /* Suppression des marges internes */
+background-image: url('image1.jpeg');     /* Ajout de la couleur d'arrière-plan */
+justify-content: space-around;/* Alignements des liens dans le menu */
+height: 90px;
+margin-top: -8px;
+border-radius: 20px;
+
+}
+.menu li {
+list-style-type: none ;       /* Suppression des puces */
+
+}
+.menu a {
+display:block;                /* Transformation en block */
+min-width: 120px;             /* Largeur minimale des liens */   
+
+margin:10px;               /* Marges externes */
+padding: 3px;            /* Marges internes */
+text-align: center;           /* Centrage du texte */   
+background-color: #1ABC9C;    /* Arrière-plan */
+color: #fff;                  /* Couleur du texte */
+text-decoration: none;        /* Suppression du soulignement */
+border: 1px solid #fff;       /* Ajout d'une bordure */
+border-radius: 4px;           /* Arrondis des bordures */
+
+transition: all 1s ;          /* Ajout des effets de transition */
+margin-top: 15px;
+}
+.menu a.actif {    
+background-color: #000 ; 
+color: #1ABC9C ;
+border-color: #1ABC9C ;
+}
+*{ 
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+.menu a:hover,
+.menu a:hover.actif{
+background-color: #ed2794;
+color: #ffe843;
+border-color: #ffe843;
+}
+body{background-image: url('images (1).jpeg');}
+table{background-color: #08432c;}
+.res{font-size: 50px; color: #fff;}
+h1{color: rgb(230, 252, 30);}

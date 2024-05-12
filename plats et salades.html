@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="plats_salades.css">
+</head>
+<body>
+    <header>
+        <ul class="menu">
+            <li>
+              <a href="projet.html" class="actif">Accueil</a>
+            </li>
+            <li>
+              <a href="vins.html">vins et boissons</a>
+            </li>
+            <li>
+              <a href="dessert.html">Dessert</a>
+            </li>
+        </ul>
+    </header>
+    <h1> faisez juste un clique sur un menu il s'agrandit!</h1>
+    <img src="menu2.png" alt="image" id="img2">
+    <img src="menu3.jpg" alt="image" id="img3">
+    <img src="menu4.jpg" alt="image" id="img4">
+    <img src="menu5.jpg" alt="image" id="img6">
+    <img src="menu6.jpg" alt="image" id="img9">
+    
+   
+    <script src="jquery-3.7.0.min.js"></script>
+
+    
+    <script>
+        $(function(){
+           
+            var ancien='';
+            $('img').click(function(){
+                var ddd="#"+$(this).attr("id");//recuperer l'element
+                if (ancien!= '' && ancien!=ddd)
+                {
+                    $(ancien).animate({'height':'150px','width':'150px',},1000);
+    
+                }
+                $(ddd).animate({'height':'500px','width':'500px',},1000);
+                ancien=ddd;
+
+
+            });
+        });
+            
+    </script>
+</body>
+</html>
